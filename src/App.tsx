@@ -1,16 +1,12 @@
-import { defineComponent,ref } from "vue";
+import { defineComponent, ref } from "vue";
+import { RouterView } from "vue-router";
 
-export const App2=defineComponent({
-    setup(){
-        const refCount=ref(0)
-        
-        const onClick=()=>{
-            refCount.value+=1
-        }
-        
-        return ()=>(<>
-            <span>{refCount.value}</span>
-            <div><button onClick={onClick}>+1</button></div>
-        </>)
-    }
-})
+export const App = defineComponent({
+  setup() {
+    return () => (
+      <>
+        <RouterView></RouterView>
+      </>
+    );
+  },
+});
